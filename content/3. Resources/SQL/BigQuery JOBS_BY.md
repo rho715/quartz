@@ -4,7 +4,7 @@ tags:
   - SQL
   - BigQuery
 ---
-## JOBS_BY_FOLDER 
+# JOBS_BY_FOLDER 
 
 ```sql 
 SELECT
@@ -48,7 +48,7 @@ SELECT
       jbf.error_result.reason,
       jbf.error_result.message 
 ```
-## JOBS_BY_PROJECT 
+# JOBS_BY_PROJECT 
 
 ```sql 
 select distinct
@@ -77,7 +77,7 @@ from `region-asia-northeast3`.INFORMATION_SCHEMA.JOBS_BY_PROJECT
 where date(timestamp_add(TIMESTAMP(creation_time), INTERVAL 9 HOUR)) >= date_sub(current_date('Asia/Seoul'), interval 30 day)
 ```
 - you can check actual query from `jobs_by_project`
-## JOBS_BY_ORGANIZATION
+# JOBS_BY_ORGANIZATION
 ```sql
 SELECT distinct TIMESTAMP_ADD(TIMESTAMP(creation_time), INTERVAL 9 HOUR) creation_time
         , project_id
@@ -93,10 +93,10 @@ SELECT distinct TIMESTAMP_ADD(TIMESTAMP(creation_time), INTERVAL 9 HOUR) creatio
 
 # Slot Calculation
 
-*How to Calculate `average_daily_slot_usage`*
-- `SUM(jbo.total_slot_ms) / (1000 * 60 * 60 * 24)`: (ms * sec * min * hour)
-- [link](https://github.com/GoogleCloudPlatform/bigquery-utils/blob/master/dashboards/system_tables/docs/daily_utilization.md)
+- *How to Calculate `average_daily_slot_usage`*
+	- `SUM(jbo.total_slot_ms) / (1000 * 60 * 60 * 24)`: (ms * sec * min * hour)
+	- [link](https://github.com/GoogleCloudPlatform/bigquery-utils/blob/master/dashboards/system_tables/docs/daily_utilization.md)
 
-*How to Calculate `average_hourly_slot_usage`*
- - `SUM(jbo.total_slot_ms) / (1000 * 60 * 60)`: (ms * sec * min)
- - [link](https://github.com/GoogleCloudPlatform/bigquery-utils/blob/master/dashboards/system_tables/docs/hourly_utilization.md)
+- *How to Calculate `average_hourly_slot_usage`*
+	 - `SUM(jbo.total_slot_ms) / (1000 * 60 * 60)`: (ms * sec * min)
+	 - [link](https://github.com/GoogleCloudPlatform/bigquery-utils/blob/master/dashboards/system_tables/docs/hourly_utilization.md)

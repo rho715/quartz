@@ -11,5 +11,6 @@ private/
 replit.nix
 
 content/4. Archive/Wavve/
+content/2. Area/Career/Files/
 *.env
 __pycache__/
