@@ -1,0 +1,32 @@
+---
+title: Multilingual Language Practice Chatbot App
+tags:
+  - streamlit
+  - AI
+  - Chatbot
+  - python
+  - toy_project
+---
+
+> [!info] 
+> This [Streamlit app](https://language-chatbot-rhorho.streamlit.app/) is designed to help you practice your language skills in 
+> - 🇺🇸 English
+> - 🇨🇳 Chinese
+> - 🇯🇵 Japanese 
+> 
+
+### 🇺🇸 English Chatbot
+- The English Chatbot is here to assist you in improving your English language skills. You can use it for:
+    - Correcting grammar and spelling errors in your sentences.
+    - Suggesting more professional words or phrases if you're using slang or casual expressions.
+
+### 🇨🇳 Chinese Chatbot
+- The Chinese Chatbot is designed to enhance your Chinese language proficiency. It can assist you by:
+    - Providing translations of words or phrases into Chinese.
+    - Offering pinyin pronunciation guides to help you practice your pronunciation.
+
+### 🇯🇵 Japanese Chatbot 
+- The Japanese Chatbot is your companion for Japanese language practice. You can use it for:
+    - Getting translations of words or phrases into Japanese.
+    - Receiving pronunciations and practicing your Japanese pronunciation.
+
