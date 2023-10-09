@@ -5,6 +5,7 @@ title: Welcome to Rho's Workspace
 <p>
 <img src="https://media.giphy.com/media/LPgFwCQg4HQBvPihcn/giphy.gif" alt="elmo waving" /> 
 </p>
+
 # Quick Intro (PARA)
 
 ## 🗂️ Project
