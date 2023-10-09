@@ -97,6 +97,6 @@ SELECT distinct TIMESTAMP_ADD(TIMESTAMP(creation_time), INTERVAL 9 HOUR) creatio
 - `SUM(jbo.total_slot_ms) / (1000 * 60 * 60 * 24)`: (ms * sec * min * hour)
 - [link](https://github.com/GoogleCloudPlatform/bigquery-utils/blob/master/dashboards/system_tables/docs/daily_utilization.md)
 
-*How to Calculate `average_hourly_slot_usage
+*How to Calculate `average_hourly_slot_usage`*
  - `SUM(jbo.total_slot_ms) / (1000 * 60 * 60)`: (ms * sec * min)
  - [link](https://github.com/GoogleCloudPlatform/bigquery-utils/blob/master/dashboards/system_tables/docs/hourly_utilization.md)
