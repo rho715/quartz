@@ -14,3 +14,4 @@ content/4. Archive/Wavve/
 
 content/1. Project/
 *.env
+__pycache__/
