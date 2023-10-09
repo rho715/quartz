@@ -12,6 +12,7 @@ tags:
 ---
 # Private Model
 <p align="right">Check out my <a href='https://huggingface.co/spaces/rho715/private_model'>Space</a></p>
+
 ## Prompt Bookmarks
 
 This is a Python script that utilizes the GPT-3.5 Turbo and GPT-4 models from OpenAI through the Azure Chat API to generate responses based on different prompt types. It also includes a Gradio interface for easy interaction with the models.

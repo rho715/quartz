@@ -1,12 +1,9 @@
 ---
 title: BigQuery JOBS_BY
-publish: "true"
+tags:
+  - SQL
+  - BigQuery
 ---
-
-```sql
-SUM(jbo.total_slot_ms) / (1000 * 60 * 60 * 24) AS average_daily_slot_usage #(ms * sec * min * hour)
-```
-
 ## JOBS_BY_FOLDER 
 
 ```sql 
@@ -92,3 +89,14 @@ SELECT distinct TIMESTAMP_ADD(TIMESTAMP(creation_time), INTERVAL 9 HOUR) creatio
     order by total_slot_ms
 ```
 - get currently running query
+
+
+# Slot Calculation
+
+*How to Calculate `average_daily_slot_usage`*
+- `SUM(jbo.total_slot_ms) / (1000 * 60 * 60 * 24)`: (ms * sec * min * hour)
+- [link](https://github.com/GoogleCloudPlatform/bigquery-utils/blob/master/dashboards/system_tables/docs/daily_utilization.md)
+
+*How to Calculate `average_hourly_slot_usage
+ - `SUM(jbo.total_slot_ms) / (1000 * 60 * 60)`: (ms * sec * min)
+ - [link](https://github.com/GoogleCloudPlatform/bigquery-utils/blob/master/dashboards/system_tables/docs/hourly_utilization.md)
