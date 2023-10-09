@@ -10,4 +10,7 @@ private/
 .replit
 replit.nix
 
-content/Archive/Wavve/
+content/4. Archive/Wavve/
+
+content/1. Project/
+*.env
