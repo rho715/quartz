@@ -8,9 +8,7 @@ draft:
 ---
 
 
-<iframe width="420" height="315"  
-src="https://www.youtube.com/watch?v=XqIfWkVI3UA">  
-</iframe>
+![Youtube Link](https://www.youtube.com/watch?v=XqIfWkVI3UA)
 
 
 [[main.py]]
