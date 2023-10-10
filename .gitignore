@@ -12,5 +12,8 @@ replit.nix
 
 content/4. Archive/Wavve/
 content/2. Area/Career/Files/
+content/Templates/
+
 *.env
 __pycache__/
+*.mov
