@@ -1,5 +1,5 @@
 ---
-title: LLM Chat - Local Code
+title: Local Code
 tags: 
 draft:
 ---

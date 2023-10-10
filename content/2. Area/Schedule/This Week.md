@@ -1,7 +1,5 @@
 ---
-
 kanban-plugin: basic
-
 ---
 
 ## 월
@@ -11,7 +9,6 @@ kanban-plugin: basic
 ## 화
 
 - [ ] 대표님 보고 리허설 ^5ycaqr
-- [ ] 디자인 & 기획팀 & 프론트엔드 미팅 잡기
 
 
 ## 수
@@ -35,7 +32,11 @@ kanban-plugin: basic
 
 
 
+***
 
+## Archive
+
+- [ ] 디자인 & 기획팀 & 프론트엔드 미팅 잡기
 
 %% kanban:settings
 ```

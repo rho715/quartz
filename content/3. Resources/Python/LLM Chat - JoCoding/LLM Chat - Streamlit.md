@@ -1,5 +1,5 @@
 ---
-title: LLM Chat - Streamlit
+title: Streamlit
 tags: 
 draft:
 ---

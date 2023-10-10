@@ -7,7 +7,11 @@ tags:
 draft:
 ---
 
-![test](https://www.youtube.com/watch?v=XqIfWkVI3UA)
+
+<iframe width="420" height="315"  
+src="https://www.youtube.com/watch?v=XqIfWkVI3UA">  
+</iframe>
+
 
 [[main.py]]
 ```python

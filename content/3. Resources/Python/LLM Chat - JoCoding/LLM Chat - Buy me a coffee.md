@@ -1,5 +1,5 @@
 ---
-title: LLM Chat - Buy me a coffee
+title: Buy me a coffee
 tags: 
 draft:
 ---
