@@ -1,10 +1,10 @@
 ---
-title: 프롬프트 확장
+title: 5. 프롬프트 확장
 ---
 
 
 
-## OpenAI 잘사용하는 방법 
+# OpenAI 잘사용하는 방법 
 
 1. [[OpenAI - PE_1|프롬프트를 위한 지침]]
 2. [[OpenAI - PE_2|반복 프롬프트 & 요약하기]]
@@ -14,7 +14,7 @@ title: 프롬프트 확장
 6. [[OpenAI - PE_6|챗봇]]
 
 
-### 프롬프트 확장 ([ipynb](https://colab.research.google.com/drive/17xL15MwqeYCU5lIJsJM8xG3kZ5so60jq?usp=sharing))
+# 프롬프트 확장 ([ipynb](https://colab.research.google.com/drive/17xL15MwqeYCU5lIJsJM8xG3kZ5so60jq?usp=sharing))
 
 ```python
 # given the sentiment from the lesson on "inferring",
@@ -75,7 +75,7 @@ print(response)
 ```
 
 
-## 참고자료
+# 참고자료
 <div style="display: flex;">
     <img src="{{site.url}}/images/2023-05-07/Temperature.png" alt="Airflow" style="width: 50%;">
 </div>

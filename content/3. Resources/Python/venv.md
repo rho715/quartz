@@ -21,7 +21,7 @@ tags:
 - conda env
 	- `anaconda3 > envs`
 
-프로젝트 폴더에 가상환경이 만들어지기 원하지 않은 분들은 다 conda env를 사용하고 있음
+프로젝트 폴더에 가상환경이 만들어지기 원하지 않은 분들은 다 conda env를 사용하고 있음.   
 나중에 생성한 가상환경을 찾기에는 conda 가상환경이 편리하지만 conda 자체를 사용안한다면 venv
 # venv
 ## environment 생성하기
@@ -118,7 +118,7 @@ pip uninstall -r  requirements.txt
 ``` 
 
 
-## 출처 
+# 출처 
 - [https://teddylee777.github.io/python/anaconda-%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95-%ED%8C%81-%EA%B0%95%EC%A2%8C/](https://teddylee777.github.io/python/anaconda-%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95-%ED%8C%81-%EA%B0%95%EC%A2%8C/)
 - [https://yganalyst.github.io/basic/anaconda_env_1/](https://yganalyst.github.io/basic/anaconda_env_1/)
 - https://www.youtube.com/watch?v=CzAyaSolZjY

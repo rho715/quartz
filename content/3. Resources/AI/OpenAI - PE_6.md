@@ -1,8 +1,8 @@
 ---
-title: 챗봇
+title: 6. 챗봇
 ---
 
-## OpenAI 잘사용하는 방법 
+# OpenAI 잘사용하는 방법 
 
 1. [[OpenAI - PE_1|프롬프트를 위한 지침]]
 2. [[OpenAI - PE_2|반복 프롬프트 & 요약하기]]
@@ -12,7 +12,7 @@ title: 챗봇
 6. **챗봇**
 
 
-### 챗봇 ([ipynb](https://colab.research.google.com/drive/14CvmxADCiXPkeOs8QfXixY3X5gVWNC5-?usp=sharing))
+# 챗봇 ([ipynb](https://colab.research.google.com/drive/14CvmxADCiXPkeOs8QfXixY3X5gVWNC5-?usp=sharing))
 
 ```python
 def get_completion_from_messages(messages, model="gpt-3.5-turbo", temperature=0):

@@ -1,10 +1,10 @@
 ---
-title: 반복 프롬프트 & 요약하기
+title: 2. 반복 프롬프트 & 요약하기
 ---
 
 
 
-## OpenAI 잘사용하는 방법 
+# OpenAI 잘사용하는 방법 
 
 1. [[OpenAI - PE_1|프롬프트를 위한 지침]]
 2. **반복 프롬프트** & **요약하기**
@@ -14,7 +14,7 @@ title: 반복 프롬프트 & 요약하기
 6. [[OpenAI - PE_6|챗봇]]
 
 
-### 반복 프롬프트 ([ipynb](https://colab.research.google.com/drive/1kolj2HPakI43DU3BOug_wEP-wQ_UCAq4?usp=sharing))
+# 반복 프롬프트 ([ipynb](https://colab.research.google.com/drive/1kolj2HPakI43DU3BOug_wEP-wQ_UCAq4?usp=sharing))
 
 -  Idea -> Implementation (code/data) -> Experimental result -> Error Analysis 
 - AI doesn't really work well with numbers 
@@ -24,7 +24,7 @@ title: 반복 프롬프트 & 요약하기
     3. Clarify instructions, give more time to think 
     4. Refine prompts with a batch of examples 
 
-### 요약하기 ([ipynb](https://colab.research.google.com/drive/1KmtI-ZI3bY_eWiXpqMw_TeNxz53smCu2?usp=sharing))
+# 요약하기 ([ipynb](https://colab.research.google.com/drive/1KmtI-ZI3bY_eWiXpqMw_TeNxz53smCu2?usp=sharing))
 
 ```python
 prod_review = """
@@ -68,5 +68,5 @@ print(response)
 
 ```
 
-## 참고자료
+# 참고자료
 - [ChatGPT Prompt Engineering for Developers - DeepLearning.AI](https://www.youtube.com/playlist?list=PLSpnHWTONcJ3Hiecy_6nprwhKyJv40U6M)
