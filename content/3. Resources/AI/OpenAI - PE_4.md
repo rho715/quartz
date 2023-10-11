@@ -1,8 +1,10 @@
 ---
 title: 4. 텍스트 변환
+tags:
+  - python
+  - openai
+  - AI
 ---
-
-
 
 # OpenAI 잘사용하는 방법 
 
@@ -59,7 +61,7 @@ English: My screen is flickering.
 Korean: 내 화면이 깜빡입니다. 
 ```
 
-## Writing (changing tones)
+## Writing (Change its tone/style)
 - formal vs informal 
 - slang -> business 
 

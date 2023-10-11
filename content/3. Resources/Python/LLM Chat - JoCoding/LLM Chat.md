@@ -35,5 +35,4 @@ draft:
 
 # File
 > [!abstract]- PDF
-> [[조코딩]랭체인 AI 웹서비스 만들기_compressed.pdf]]
-> 
+> [[[조코딩]랭체인 AI 웹서비스 만들기_compressed.pdf]]

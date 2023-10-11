@@ -1,8 +1,10 @@
 ---
 title: 3. 추론하기
+tags:
+  - python
+  - openai
+  - AI
 ---
-
-
 
 # OpenAI 잘사용하는 방법 
 
@@ -15,7 +17,7 @@ title: 3. 추론하기
 
 
 # 추론하기 ([ipynb](https://colab.research.google.com/drive/110CDWTIkuBMCQcAnzGvVSyK4oDnXMVia?usp=sharing))
-## sentiment
+## Sentiment
 ```python
 prompt = f"""
 Identify a list of emotions that the writer of the \
@@ -29,7 +31,8 @@ response = get_completion(prompt)
 print(response)
 ```
 
-## information extraction is part of NLP (Natural Language Processing)  
+## Information extraction is part of NLP
+*(Natural Language Processing)*  
 
 ```python
 prompt = f"""

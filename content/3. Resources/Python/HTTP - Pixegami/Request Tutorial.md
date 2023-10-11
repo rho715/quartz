@@ -6,10 +6,7 @@ tags:
   - python
 draft:
 ---
-
-
-[Youtube Link](https://www.youtube.com/watch?v=XqIfWkVI3UA)
-
+<iframe src="https://www.youtube.com/watch?v=XqIfWkVI3UA" style="width:100%; height:500px;" ></iframe>
 
 [[main.py]]
 ```python

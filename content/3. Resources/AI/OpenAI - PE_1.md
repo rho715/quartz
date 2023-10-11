@@ -1,5 +1,9 @@
 ---
 title: 1. 프롬프트를 위한 지침
+tags:
+  - python
+  - openai
+  - AI
 ---
 
 
@@ -18,7 +22,7 @@ title: 1. 프롬프트를 위한 지침
 >[!note]
 > write clear and specific instructions (separate sections)
 
-## use delimiters
+## Use delimiters
 ```python
  def get_completion(prompt, model="gpt-35-turbo"):
      msg = [{"role": "user", "content": prompt}]
@@ -51,7 +55,7 @@ title: 1. 프롬프트를 위한 지침
  """
  ```
 
-## Check whether conditions are satisfied & Check assumptions requried to do the task 
+## Check whether conditions are satisfied 
  ```python
  text_1 = f"""
  Making a cup of tea is easy! First, you need to get some \
@@ -108,7 +112,7 @@ title: 1. 프롬프트를 위한 지침
 
  ```
 
-## Few-shot prompting (Give successful examples of completing tasks then ask model to perform the task)
+## Few-shot prompting 
  ```python
  prompt = f"""
  Your task is to answer in a consistent style.
@@ -121,9 +125,7 @@ title: 1. 프롬프트를 위한 지침
  """
  ```
 
-## Give the model time to think
-
-### Specify the steps to complete a task 
+## Give the model time to think: Specify the steps to complete a task 
  ```python
  text = f"""
  In a charming village, siblings Jack and Jill set out on \ 
@@ -270,8 +272,8 @@ title: 1. 프롬프트를 위한 지침
  print(response)
  ```
 
-## model limitations
-1. hallucination : in order to reduce hallucinations, fist find relevant information, then answer the question based on the relevant information. 
+# Model Limitations
+1. hallucination: in order to reduce hallucinations, fist find relevant information, then answer the question based on the relevant information. 
 
 # 참고자료
 - [ChatGPT Prompt Engineering for Developers - DeepLearning.AI](https://www.youtube.com/playlist?list=PLSpnHWTONcJ3Hiecy_6nprwhKyJv40U6M)

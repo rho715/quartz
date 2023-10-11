@@ -1,8 +1,10 @@
 ---
 title: 5. 프롬프트 확장
+tags:
+  - python
+  - openai
+  - AI
 ---
-
-
 
 # OpenAI 잘사용하는 방법 
 
@@ -66,7 +68,7 @@ they can reach out to customer service.
 Make sure to use specific details from the review.
 Write in a concise and professional tone.
 Sign the email as `AI customer agent`.
-Customer review: ```{review}```
+Customer review: '''{review}'''
 Review sentiment: {sentiment}
 """
 response = get_completion(prompt, temperature=0.7)
@@ -76,6 +78,4 @@ print(response)
 
 
 # 참고자료
-<div style="display: flex;">
-    <img src="{{site.url}}/images/2023-05-07/Temperature.png" alt="Airflow" style="width: 50%;">
-</div>
+![[Pasted image 20231011200020.png]]
