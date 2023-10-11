@@ -8,7 +8,7 @@ draft:
 ---
 
 
-![Youtube Link](https://www.youtube.com/watch?v=XqIfWkVI3UA)
+[Youtube Link](https://www.youtube.com/watch?v=XqIfWkVI3UA)
 
 
 [[main.py]]

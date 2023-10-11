@@ -1,7 +1,7 @@
 ---
 title: Streamlit
 tags: 
-draft:
+draft: "true"
 ---
 # Code
 ```python

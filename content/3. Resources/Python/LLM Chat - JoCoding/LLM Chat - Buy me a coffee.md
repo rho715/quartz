@@ -1,7 +1,7 @@
 ---
 title: Buy me a coffee
 tags: 
-draft:
+draft: "true"
 ---
 # Code
 ```python

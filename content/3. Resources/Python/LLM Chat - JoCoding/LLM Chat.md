@@ -27,11 +27,11 @@ draft:
         - [꼬맨틀 - 단어 유사도 추측 게임 - 뉴스젤리 : 데이터 시각화 전문 기업](https://semantle-ko.newsjel.ly/)
 
 
-# Codes
-1. [[LLM Chat - Local Code]]
-2. [[LLM Chat - Streamlit]]
-3. [[LLM Chat - Buy me a coffee]]
-4. [[LLM Chat - Streaming]]
+# [Codes](https://github.com/rho715/quartz/tree/v4/content/3.%20Resources/Python/LLM%20Chat%20-%20JoCoding)
+1. LLM Chat - Local Code
+2. LLM Chat - Streamlit
+3. LLM Chat - Buy me a coffee
+4. LLM Chat - Streaming
 
 # File
 > [!abstract]- PDF
