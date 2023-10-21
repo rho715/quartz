@@ -3,7 +3,7 @@ title: 4. 텍스트 변환
 tags:
   - python
   - openai
-  - AI
+  - ai
 ---
 
 # OpenAI 잘사용하는 방법 

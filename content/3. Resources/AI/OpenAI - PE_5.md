@@ -3,7 +3,7 @@ title: 5. 프롬프트 확장
 tags:
   - python
   - openai
-  - AI
+  - ai
 ---
 
 # OpenAI 잘사용하는 방법 

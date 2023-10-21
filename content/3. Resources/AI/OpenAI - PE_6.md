@@ -3,7 +3,7 @@ title: 6. 챗봇
 tags:
   - python
   - openai
-  - AI
+  - ai
 ---
 
 # OpenAI 잘사용하는 방법 

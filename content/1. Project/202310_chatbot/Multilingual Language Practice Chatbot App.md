@@ -2,8 +2,8 @@
 title: Multilingual Language Practice Chatbot App
 tags:
   - streamlit
-  - AI
-  - Chatbot
+  - ai
+  - chatbot
   - python
   - toy_project
 ---

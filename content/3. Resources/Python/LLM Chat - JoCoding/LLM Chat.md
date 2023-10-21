@@ -1,10 +1,10 @@
 ---
 title: 랭체인(LangChain) 이용한 AI 웹서비스 만들기 (with ChatGPT, LLaMA 2)
 tags:
-  - AI
+  - ai
   - python
   - streamlit
-  - Chatbot
+  - chatbot
   - langchain
 draft:
 ---
@@ -35,4 +35,4 @@ draft:
 
 # File
 > [!abstract]- PDF
-> [[[조코딩]랭체인 AI 웹서비스 만들기_compressed.pdf]]
+> [[조코딩]랭체인 AI 웹서비스 만들기_compressed.pdf]]

@@ -3,7 +3,7 @@ title: 1. 프롬프트를 위한 지침
 tags:
   - python
   - openai
-  - AI
+  - ai
 ---
 
 

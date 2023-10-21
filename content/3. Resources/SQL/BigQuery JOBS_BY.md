@@ -1,8 +1,8 @@
 ---
 title: BigQuery JOBS_BY
 tags:
-  - SQL
-  - BigQuery
+  - sql
+  - bigquery
 ---
 # JOBS_BY_FOLDER 
 

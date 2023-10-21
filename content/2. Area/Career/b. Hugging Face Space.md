@@ -1,13 +1,13 @@
 ---
 title: Hugging Face Space
 tags:
-  - HF
-  - HuggingFace
+  - hugging_face
+  - hugging_face
   - gradio
   - streamlit
   - python
-  - AI
-  - Chatbot
+  - ai
+  - chatbot
   - toy_project
 ---
 # Private Model

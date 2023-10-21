@@ -3,7 +3,7 @@ title: 2. 반복 프롬프트 & 요약하기
 tags:
   - python
   - openai
-  - AI
+  - ai
 ---
 
 

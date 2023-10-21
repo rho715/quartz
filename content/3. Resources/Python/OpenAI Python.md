@@ -3,9 +3,11 @@ title: OpenAI Python
 tags:
   - openai
   - python
-  - AI
+  - ai
   - streamlit
 draft: "true"
+status:
+  - working
 ---
 
 
@@ -35,7 +37,7 @@ while(True):
     print("\n" + response['choices'][0]['message']['content'] + "\n")
 ```
 # Using Streamlit make AI chatbot
-## utils.py
+## `utils.py`
 
 ```python
 import openai  
@@ -66,7 +68,7 @@ def update_chat(messages, role, content):
 ```
 
 
-## sample code
+## Sample code
 
 ```python
 import streamlit as st  

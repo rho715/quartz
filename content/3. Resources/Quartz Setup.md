@@ -1,7 +1,7 @@
 ---
 title: Quartz Setup
 tags:
-  - Quartz
+  - quartz
 ---
 # 작업 순서
 
