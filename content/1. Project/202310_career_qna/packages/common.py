@@ -1,0 +1,6 @@
+file_path_resume = "/Users/yoonjungrho/rho_work/quartz/content/2. Area/Career/files/이력서/2023_노윤정_이력서.pdf"
+file_path_resume_eng = "/Users/yoonjungrho/rho_work/quartz/content/2. Area/Career/files/이력서/Yoon Jung Rho Resume 2023.pdf"
+file_path_cv = "/Users/yoonjungrho/rho_work/quartz/content/2. Area/Career/files/경력기술서/2023_노윤정_경력기술서_Wavve.pdf"
+# file_path = "./files/2023_노윤정_경력기술서_Wavve.pdf"
+# file_path = "/Users/yoonjungrho/rho_work/quartz/content/2. Area/Career/files/경력기술서/sample.pdf"
+# file_path = "/Users/yoonjungrho/rho_work/quartz/content/2. Area/Career/files/이력서/2023_노윤정_이력서.pdf"
