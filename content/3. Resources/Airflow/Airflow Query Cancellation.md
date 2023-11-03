@@ -325,7 +325,7 @@ tags:
 	  
 	LOC = 'asia-northeast3'  
 	default_args = {  
-	    'owner': 'rho715@wavve.com',  
+	    'owner': 'rho715@company.com',  
 	    'depends_on_past': False,  
 	    'email_on_failure': False,  
 	    'email_on_retry': False,  
@@ -335,7 +335,7 @@ tags:
 	# common #####  
 	warehouse_project = Variable.get('warehouse_project') #for backup  
 	project_id = common.get_current_project_id()  
-	dataset = 'wavve_log'  
+	dataset = 'company_log'  
 	  
 	path_sql_files = env.cur_dir + '/dag_utils/sql_files/'  
 	DATE_FORMAT = '%Y-%m-%d %H:00:00'  
@@ -428,7 +428,7 @@ tags:
 	    owner = default_args['owner']  
 	    table_name = kwargs['table_name']  
 	  
-	    path_query_table_info = f"{path_sql_files}"+'wavve_meta.table_info.sql' # GCS SQL FILE DIRECTIORY  
+	    path_query_table_info = f"{path_sql_files}"+'company_meta.table_info.sql' # GCS SQL FILE DIRECTIORY  
 	    with open(path_query_table_info) as f:  
 	        query = f.read().replace('{project}', project_id).replace('{dataset}', dataset)  
 	    DF_table_info = run_query_df(owner, query)  
@@ -461,9 +461,9 @@ tags:
 	def run_insert_py(**kwargs):  
 	    table_name = kwargs['table_name']  
 	  
-	    path_query = f"{path_sql_files}wavvedp-prd.{dataset}.{table_name}"+'.sql'  
+	    path_query = f"{path_sql_files}companydp-prd.{dataset}.{table_name}"+'.sql'  
 	    with open(path_query) as f:  
-	        query_format = f.read().replace('wavvedp-prd', project_id)  
+	        query_format = f.read().replace('companydp-prd', project_id)  
 	  
 	    return_time = kwargs.get('ti').xcom_pull(task_ids=['prd_haystack_backup'])  
 	    return_time = return_time[0]  
