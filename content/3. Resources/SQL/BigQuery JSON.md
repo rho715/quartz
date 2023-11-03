@@ -47,7 +47,7 @@ runQuery_DF(query)
 
     
   
-<div>
+<div style="width: 100%; overflow-x: auto;">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -121,7 +121,7 @@ runQuery_DF(query)
 
 
 
-<div>
+<div style="width: 100%; overflow-x: auto;">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
