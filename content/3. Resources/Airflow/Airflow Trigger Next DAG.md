@@ -3,7 +3,6 @@ title: Airflow Trigger Next DAG
 tags:
   - airflow
   - python
-draft: "false"
 ---
 # 작업 배경
 - GCP Composer로 매 분 CDN 데이터를 조회하여 BigQuery로 테이블을 생성하고 있었음
@@ -50,6 +49,44 @@ draft: "false"
 
 ## API JSON FORMAT
 ```json
+# domain list Response
+{
+    "reqid": "asdfasdf", // 요청 id
+    "reqtime": "2021-04-12 10:00:00",  // 요청 시간
+    "rtcode": "200", // 응답 상태 코드
+    "data": [ // 권한에 해당하는 도메인 리스트
+        "apitest.example.net"
+    ],
+    "metric": [
+        "domain_list"
+    ]
+}
+```
+
+```json
+# domain Response
+{
+    "rtcode": "200", // 응답 상태 코드
+    "reqid": "asdfasdf", // 요청 id
+    "reqtime": "2021-04-12 10:00:00",  // 요청 시간
+    "domain": "apitest.example.net", // 조회 도메인
+    "step": "5m", // 조회 단위
+    "metric": [ // 데이터 종류 (배열 순서)
+        "date",
+        "error_ratio"
+    ],
+    "data": [ // 시간별 데이터 리스트
+        [
+            1618110000 // Unix Time (int)
+            0 //  에러율(float)
+        ],
+        [
+            1618110300,
+            0
+        ],
+        ...
+   ]
+}
 ```
 
 ## 코드 파일
