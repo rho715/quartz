@@ -6,7 +6,7 @@ tags:
   - sql
 ---
 
-#### Using function to clean json data
+# Using function to clean json data
 
 ```python
 from google.cloud import bigquery
@@ -81,7 +81,7 @@ runQuery_DF(query)
 
 
 
-#### Using `json_extract_scalar` & `json_extract` 
+# Using `json_extract_scalar` & `json_extract` 
 
 ```python
 from google.cloud import bigquery
@@ -163,7 +163,7 @@ runQuery_DF(query)
 
 
 
-#### Using `JSON_QUERY_ARRAY` & `UNNEST()`
+# Using `JSON_QUERY_ARRAY` & `UNNEST()`
 
 ```python
 from google.cloud import bigquery
@@ -232,7 +232,7 @@ runQuery_DF(query)
 
 
 
-<div style="width: 100%; overflow-x: auto;"> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style>
+<div style="width: 100%; overflow-x: auto;"> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } /* Setting specific width for columns */ .dataframe th, .dataframe td { padding: 8px 15px; /* Adding more padding for clarity */ white-space: nowrap; /* Content will be on a single line */ } /* Adjust the below widths as required */ .dataframe th:nth-child(1), .dataframe td:nth-child(1) { width: 50px; } .dataframe th:nth-child(2), .dataframe td:nth-child(2) { width: 200px; } .dataframe th:nth-child(3), .dataframe td:nth-child(3) { width: 250px; } .dataframe th:nth-child(4), .dataframe td:nth-child(4) { width: 250px; } /* ... Continue for other columns ... */ </style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
