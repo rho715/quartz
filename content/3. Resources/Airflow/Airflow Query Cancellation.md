@@ -5,7 +5,6 @@ tags:
   - airflow
 ---
 
-
 <div class="notice--success">
 <h4> 작업 배경  </h4>
 <ul> 
@@ -18,11 +17,9 @@ tags:
 </div>
 
 ![[jobs_by_folder.png]]
-
 - 내가 예상한 작업 순서
     - 1 → 2 → 3 → 4 
     - delete → insert → delete → insert
-
 - 실제 작업 순서
     - 1 → 3 → 2 → 4
     - delete → delete → insert → insert
@@ -35,13 +32,12 @@ tags:
     <li> Task가 실패를 해도 query는 캔슬이 안된다.   </li>
 </ul>
 </div>
-![[chatGPT.png]]
 
+![[chatGPT.png]]
 - 사실 제발 2번이 아니길.. 하면서 chatGPT한테 물어봤는뎈ㅋㅋ 쿼리는 캔슬이 안된다고 했다...  
 - chatGPT를 부정하며 `prd01_dag_retry_delay.py` DAG 파일을 돌려봤다... 
 - 아래 이미지처럼 Timeout 이 발생하여 Task는 실패하지만 너무 슬프게도(?) 작업은 성공이 되어있었다.
-    - `dag_retry_delay.py` Task 실행 
-    - ![[prd01_dag_retry_delay.png]]
+    - `dag_retry_delay.py` Task 실행 ![[prd01_dag_retry_delay.png]]
     - Task 쿼리 실행 결과   ![[prd01_dag_retry_delay_jbf.png]]
 
 ## Task 실패와 동시에 쿼리 캔슬하기 
@@ -56,101 +52,103 @@ tags:
 <summary> <code> dag_retry_delay.py </code> </summary>
 <div markdown="1">
 ```python
-import os
-from airflow import DAG
-from airflow.operators.dummy import DummyOperator
-from airflow.operators.python import PythonOperator
+	import os
+	from airflow import DAG
+	from airflow.operators.dummy import DummyOperator
+	from airflow.operators.python import PythonOperator
+	
+	from datetime import datetime, timedelta
+	import pytz
+	import pendulum
+	from dag_utils.gcp_bigquery_v2 import run_query
+	import sys
+	
+	def get_path(_path, step, _dir=None):
+	    up_path = os.sep.join(_path.split(os.sep)[:-step])
+	    if _dir is None:
+	        return up_path
+	    return os.path.join(up_path, _dir)
+	
+	module_path = get_path(os.path.dirname(os.path.abspath(__file__)), 2)
+	sys.path.append(module_path)
+	KEY_PATH = "data/{key_name}.json"
+	os.environ["GOOGLE_APPLICATION_CREDENTIALS"]=KEY_PATH
 
-from datetime import datetime, timedelta
-import pytz
-import pendulum
-from dag_utils.gcp_bigquery_v2 import run_query
-import sys
-
-def get_path(_path, step, _dir=None):
-    up_path = os.sep.join(_path.split(os.sep)[:-step])
-    if _dir is None:
-        return up_path
-    return os.path.join(up_path, _dir)
-
-module_path = get_path(os.path.dirname(os.path.abspath(__file__)), 2)
-sys.path.append(module_path)
-KEY_PATH = "data/{key_name}.json"
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"]=KEY_PATH
-
-def print_time(**kwargs) -> str:
-    time_utc = datetime.now()
-    time_kst = time_utc + timedelta(hours=9)
-    logical_date = kwargs.get('logical_date')
-
-    print("UTC time: ", time_utc)
-    print("KST time: ", time_kst)
-    print("context logical_date: ", logical_date)
-    print("context logical_date (kst): ", logical_date + timedelta(hours=9))
-
-    run_query(owner="local_airflow", query=kwargs['query'])
-    return
+	def print_time(**kwargs) -> str:
+	    time_utc = datetime.now()
+	    time_kst = time_utc + timedelta(hours=9)
+	    logical_date = kwargs.get('logical_date')
+	
+	    print("UTC time: ", time_utc)
+	    print("KST time: ", time_kst)
+	    print("context logical_date: ", logical_date)
+	    print("context logical_date (kst): ", logical_date + timedelta(hours=9))
+	
+	    run_query(owner="local_airflow", query=kwargs['query'])
+	    return
 
 
-kst_timezone = pytz.timezone('Asia/Seoul')
+	kst_timezone = pytz.timezone('Asia/Seoul')
+	
+	OWNER = 'rho715@'
+	DAG_ID = os.path.basename(__file__).replace(".pyc", "").replace(".py", "")
+	DAG_NAME = f'prd01_{DAG_ID}'
+	default_args = {
+	    'owner': OWNER,
+	    'dag_id': DAG_ID,
+	    'depends_on_past': False,
+	    'start_date': pendulum.now(tz='Asia/Seoul') - timedelta(days=1),
+	    'email_on_failure': False,
+	    'email_on_retry': False,
+	}
+	
+	query = f"""
+	# ----------------------------------------------------------------------
+	
+	DELETE `{target_table}`
+	WHERE ap_timestamp between '2023-05-04 00:00:00'  and 
+	and '2023-05-04 18:00:00';
+	
+	# ----------------------------------------------------------------------
 
-OWNER = 'rho715@'
-DAG_ID = os.path.basename(__file__).replace(".pyc", "").replace(".py", "")
-DAG_NAME = f'prd01_{DAG_ID}'
-default_args = {
-    'owner': OWNER,
-    'dag_id': DAG_ID,
-    'depends_on_past': False,
-    'start_date': pendulum.now(tz='Asia/Seoul') - timedelta(days=1),
-    'email_on_failure': False,
-    'email_on_retry': False,
-}
-
-query = f"""
-# ----------------------------------------------------------------------
-
-DELETE `{target_table}`
-WHERE ap_timestamp >= '2023-05-04 00:00:00' and ap_timestamp < '2023-05-04 18:00:00';
-
-# ----------------------------------------------------------------------
-
-INSERT INTO `{target_table}`
-SELECT 
-  *
-FROM `{from}`
-WHERE ap_timestamp >= '2023-05-04 00:00:00' and ap_timestamp < '2023-05-04 18:00:00';
-"""
-
-with DAG(DAG_NAME,
-         default_args=default_args,
-         dagrun_timeout=timedelta(hours=2),
-         max_active_runs=1,
-         max_active_tasks=1,
-         catchup=False,
-         is_paused_upon_creation=True,
-        schedule_interval="10 * * * *",
-         tags=['testing']
-         ) as dag:
-    start = DummyOperator(
-        task_id='start',
-        dag=dag
-    )
-    args = {"query":query}
-    task_01 = PythonOperator(
-        task_id='task_01',
-        python_callable=print_time,
-        op_kwargs=args,
-        provide_context=True,
-        execution_timeout=timedelta(seconds=5),
-        dag=dag
-    )
-
-    end = DummyOperator(
-        task_id='end',
-        dag=dag
-    )
-
-    start >> task_01 >> end
+	INSERT INTO `{target_table}`
+	SELECT 
+	  *
+	FROM `{from}`
+	WHERE ap_timestamp between '2023-05-04 00:00:00'  and 
+	and '2023-05-04 18:00:00';
+	"""
+	
+	with DAG(DAG_NAME,
+	         default_args=default_args,
+	         dagrun_timeout=timedelta(hours=2),
+	         max_active_runs=1,
+	         max_active_tasks=1,
+	         catchup=False,
+	         is_paused_upon_creation=True,
+	        schedule_interval="10 * * * *",
+	         tags=['testing']
+	         ) as dag:
+	    start = DummyOperator(
+	        task_id='start',
+	        dag=dag
+	    )
+	    args = {"query":query}
+	    task_01 = PythonOperator(
+	        task_id='task_01',
+	        python_callable=print_time,
+	        op_kwargs=args,
+	        provide_context=True,
+	        execution_timeout=timedelta(seconds=5),
+	        dag=dag
+	    )
+	
+	    end = DummyOperator(
+	        task_id='end',
+	        dag=dag
+	    )
+	
+	    start >> task_01 >> end
 ```
 
 
@@ -205,7 +203,8 @@ query = f"""
 # ----------------------------------------------------------------------
 
 DELETE `{target_table}`
-WHERE ap_timestamp >= '2023-05-04 00:00:00' and ap_timestamp < '2023-05-04 18:00:00';
+	WHERE ap_timestamp between '2023-05-04 00:00:00'  and 
+	and '2023-05-04 18:00:00';
 
 # ----------------------------------------------------------------------
 
@@ -213,7 +212,8 @@ INSERT INTO `{target_table}`
 SELECT 
   *
 FROM `{from}`
-WHERE ap_timestamp >= '2023-05-04 00:00:00' and ap_timestamp < '2023-05-04 18:00:00';
+	WHERE ap_timestamp between '2023-05-04 00:00:00'  and 
+	and '2023-05-04 18:00:00';
 """
 
 def my_bigquery_task(**kwargs):
@@ -291,3 +291,6 @@ with DAG(DAG_NAME,
 ```
 </div>
 </details>
+
+## 최신 버전 
+- `gcp_composer/load/load/prd01/wavve_log/load_notes.py`
