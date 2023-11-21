@@ -4,15 +4,10 @@ tags:
   - airflow
   - python
   - "#check"
-draft: "true"
 ---
 
 # Airflow start_date 정리
-
-   <div style="display: flex;">
-        <img src="{{site.url}}/images/2023-05-05/airflow_timeline.png" alt="Airflow" style="width: 100%;">
-    </div>
-
+![[Pasted image 20231122025431.png]]
 [블로그이미지](https://blog.bsk.im/2021/03/21/apache-airflow-aip-39/)
 
 <div class="notice--success">
@@ -183,15 +178,11 @@ import os
 
 ### `code 1`은 실행이 되고 `code 2`는 실행이 안된 이유
 
-*   `code 1`은 `start_date`를 **23년 5월 3일 오후 1시**로 등록 & `schedule_interval`도 **매일 오후 1시**로 설정. 이 뜻은 결국 **23년 5월 3일 오후 1시**의 데이터를 **23년 5월 4일 오후 1시**에 취합 작업을 실행한다는 뜻. 하지만 내가 작업을 **23년 5월 4일 오후 1시 이후**에 등록했으니 *23년 5월 4일 오후 1시*에 돌았어야할 작업이 돌지 않아서 작업을 자동으로 실행해 주었다.
-    <div style="display: flex;">
-        <img src="{{site.url}}/images/2023-05-05/day_passed.png" alt="Airflow" style="width: 100%;">
-    </div>
+*   `code 1`은 `start_date`를 **23년 5월 3일 오후 1시**로 등록 & `schedule_interval`도 **매일 오후 1시**로 설정. 이 뜻은 결국 **23년 5월 3일 오후 1시**의 데이터를 **23년 5월 4일 오후 1시**에 취합 작업을 실행한다는 뜻. 하지만 내가 작업을 **23년 5월 4일 오후 1시 이후**에 등록했으니 *23년 5월 4일 오후 1시*에 돌았어야할 작업이 돌지 않아서 작업을 자동으로 실행해 주었다. ![[Pasted image 20231122025502.png]]
+
  
-*   `code 2`는 `start_date`를 **23년 5월 3일 오후 1시 30분**으로 등록 & `schedule_interval`도 **매일 오후 1시 30분**으로 설정. 따라서 **23년 5월 4일 오후 1시 30분**에 작업이 실행되는데. 내가 작업을 **23년 5월 4일 오후 1시**에 등록했으니 *23년 5월 4일 오후 1시 30분*이 되면 자동으로 실행될 예정이여서 돌지 않았다.
-    <div style="display: flex;">
-        <img src="{{site.url}}/images/2023-05-05/day_coming.png" alt="Airflow" style="width: 100%;">
-    </div>
+*   `code 2`는 `start_date`를 **23년 5월 3일 오후 1시 30분**으로 등록 & `schedule_interval`도 **매일 오후 1시 30분**으로 설정. 따라서 **23년 5월 4일 오후 1시 30분**에 작업이 실행되는데. 내가 작업을 **23년 5월 4일 오후 1시**에 등록했으니 *23년 5월 4일 오후 1시 30분*이 되면 자동으로 실행될 예정이여서 돌지 않았다. ![[Pasted image 20231122025529.png]]
+
     
 
 # Hourly schedule
@@ -245,10 +236,8 @@ import os
     <summary>설명</summary>
     <div markdown="1">
 
-    정답: d
-    <div style="display: flex;">
-        <img src="{{site.url}}/images/2023-05-05/catchup.png" alt="Airflow" style="width: 100%;">
-    </div>
+    정답: d ![[Pasted image 20231122025630.png]]
+
 
 
     </div>
@@ -265,9 +254,7 @@ current\_time: `2023-05-04 13:00:00`
 |---|---|---|---|
 |`- timedelta(hours=1)`|`2023-05-04 12:00:00`|`(10 * * * *)`|`2023-05-04 12:10:00`|`2023-05-04 13:10:00`|
 
-<div style="display: flex;">
-    <img src="{{site.url}}/images/2023-05-05/hourly.png" alt="Airflow" style="width: 100%;">
-</div>
+![[Pasted image 20231122025714.png]]
 
 
 
@@ -305,8 +292,8 @@ current\_time: `2023-05-04 13:00:00`
     <div markdown="1">
 
     정답: c
-    <div style="display: flex;">
-        <img src="{{site.url}}/images/2023-05-05/quiz2.png" alt="Airflow" style="width: 100%;">
+    <div style="display: flex;"> ![[]]
+        <img src="./files/Pasted image 20231122025740.png" alt="Airflow" style="width: 100%;">
     </div>
 
 

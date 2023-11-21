@@ -3,7 +3,6 @@ title: BigQuery Total Storage
 tags:
   - bigquery
   - "#check"
-draft: "true"
 ---
 
 # 목적/배경
@@ -31,4 +30,10 @@ draft: "true"
 * [INFORMATION_SCHEMA](https://rho715.github.io/gcp/INFORMATION_SCHEMA/) -> INFORMATION_SCHEMA.TABLE*
 
 # SQL
-- [ ] #task add sql from dashboard
+```sql
+SELECT
+*
+, current_datetime('Asia/Seoul') current_time
+FROM
+  `region-asia-northeast3`.INFORMATION_SCHEMA.TABLE_STORAGE_BY_ORGANIZATION
+```

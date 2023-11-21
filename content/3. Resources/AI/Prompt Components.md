@@ -7,6 +7,7 @@ tags:
   - youtube
 ---
 <iframe src="https://www.youtube.com/embed/olRqEoiWy6Q" Width="560" Height="315" > </iframe>
+
 # 6 Parts
 1. 작업 (Task) `가장 중요함`
 3. 맥락 (Context) `원하는 정보를 얻으려면 꼭 필요하다`

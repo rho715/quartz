@@ -3,7 +3,6 @@ title: BigQuery INFORMATION_SCHEMA
 tags:
   - bigquery
   - "#check"
-draft: "true"
 ---
 
 ## BigQuery INFORMATION_SCHEMA 소개

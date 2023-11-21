@@ -8,7 +8,6 @@ tags:
   - google
   - aws
   - "#check"
-draft: "true"
 ---
 # AI Github links 
 ## OpenAI 

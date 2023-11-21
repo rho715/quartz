@@ -25,7 +25,7 @@ tags:
 		- DAG2: DAG1에서 BigQuery에 입력된 raw JSON 데이터 조회 & key & value 추출하여 column화 시켜 대시보드용 BigQuery에 입력 -> DAG3 Trigger
 		- DAG3: DAG2에서 생성된 데이터 조회 & 데이터 없을시 슬랙 알람 발송
 
-> ![note]
+> [!note]
 > - TASK 단위에서 DAG단위로 변경한이유는 데이터 입력 시도와 별도로 슬랙 알람을 껐다 키기 위함 
 
 # 코드

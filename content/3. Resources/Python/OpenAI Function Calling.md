@@ -5,7 +5,6 @@ tags:
   - openai
   - python
   - "#check"
-draft: "true"
 ---
 # OpenAI Function Calling 
 - [OpenAI Documentation](https://platform.openai.com/docs/guides/function-calling)
