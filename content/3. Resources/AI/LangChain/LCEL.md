@@ -43,7 +43,7 @@ tags:
 - Flexible Fallbacks design
 - [Define functions and run them with AI](https://python.langchain.com/docs/expression_language/how_to/functions)
 	- ie. What is total length of a + b 
-	- {"a": "aloha", "b": "hawaii"}
+	- `{"a": "aloha", "b": "hawaii"}`
 - [llm chain 결과로 나온 strings -> List로 변환](https://python.langchain.com/docs/expression_language/how_to/generators)
 - [llm chain 병렬 처리 (you can get joke & poem at the same time)](https://python.langchain.com/docs/expression_language/how_to/map)
 - [category에 따른 llm chain branch 처리도 가능](https://python.langchain.com/docs/expression_language/how_to/routing)

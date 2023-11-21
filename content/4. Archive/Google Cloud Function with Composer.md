@@ -3,7 +3,6 @@ title: Google Cloud Function with Composer
 tags:
   - composer
   - flask
-  - "#check"
 ---
 # 배경 
 - Flask로 web application을 구현하여 Input값을 Cloud Function으로 전송 

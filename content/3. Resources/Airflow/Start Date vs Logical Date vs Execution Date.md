@@ -3,7 +3,6 @@ title: Start Date vs Logical Date vs Execution Date
 tags:
   - airflow
   - python
-  - "#check"
 ---
 
 # Airflow start_date 정리
