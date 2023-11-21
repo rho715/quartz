@@ -223,12 +223,7 @@ import os
     <div markdown="1">
 
     
-    current\_time: `2023-05-04 13:00:00`
-
-   
-    |type|start_date|schedule_interval|logical_date|실행 시간|
-    |---|---|---|---|
-    |`- timedelta(days=1)`|`2023-05-03 13:00:00`|`(10 * * * *)`|`2023-05-03 13:10:00`|`2023-05-03 14:10:00`|
+    current\_time: `2023-05-04 13:00:00`  ![[Pasted image 20231122032812.png]]
 
     </div>
     </details>   
@@ -249,10 +244,7 @@ import os
 
 current\_time: `2023-05-04 13:00:00`
 
-
-|type|start_date|schedule_interval|logical_date|실행 시간|
-|---|---|---|---|
-|`- timedelta(hours=1)`|`2023-05-04 12:00:00`|`(10 * * * *)`|`2023-05-04 12:10:00`|`2023-05-04 13:10:00`|
+![[Pasted image 20231122032721.png]]
 
 
 ![[Pasted image 20231122025714.png]]
@@ -279,12 +271,8 @@ current\_time: `2023-05-04 13:00:00`
     <div markdown="1">
 
     
-    current\_time: `2023-05-04 13:40:00`
+    current\_time: `2023-05-04 13:40:00` ![[Pasted image 20231122032750.png]]
 
-
-    |type|start_date|schedule_interval|logical_date|실행 시간|
-    |---|---|---|---|
-    |`- timedelta(hours=1)`|`2023-05-04 12:40:00`|`(10 * * * *)`|`2023-05-04 13:10:00`|`2023-05-04 14:10:00`|
 
     </div>
     </details>   

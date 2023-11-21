@@ -7,7 +7,6 @@ tags:
   - azure
   - google
   - aws
-  - "#check"
 ---
 # AI Github links 
 ## OpenAI 

@@ -5,8 +5,6 @@ tags:
   - python
   - ai
   - streamlit
-status:
-  - working
 ---
 
 

@@ -4,7 +4,6 @@ tags:
   - ai
   - openai
   - python
-  - "#check"
 ---
 ## OpenAI Function Calling 
 - [OpenAI Documentation](https://platform.openai.com/docs/guides/function-calling)
