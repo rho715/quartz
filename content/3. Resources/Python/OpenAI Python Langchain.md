@@ -12,7 +12,7 @@ status:
 > - from [Models in LangChain](https://lisarebecca.medium.com/models-in-langchain-db04e688ac1f)
 
 - text
-	- text-davinchi
+	- text-davinci
 - chat
 	- gpt-35-turbo
 

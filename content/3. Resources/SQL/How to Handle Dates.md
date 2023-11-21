@@ -33,6 +33,6 @@ FORMAT_DATETIME('%b %d, %Y - %I:%M %p', PARSE_DATETIME('%Y-%m-%d %H:%M:%S', time
 FROM my_table;
 
 ```
-> original_timestamp	 | parsed_timestamp |	formatted_timestamp
-> 2022-07-27 15:30:45	| 2022-07-27T15:30:45 | "Jul 27, 2022 - 03:30 PM"
-> 2022-08-10 08:00:00 | 2022-08-10T08:00:00 | "Aug 10, 2022 - 08:00 AM"
+>  original_timestamp	 | parsed_timestamp |	formatted_timestamp
+>   2022-07-27 15:30:45	| 2022-07-27T15:30:45 | "Jul 27, 2022 - 03:30 PM"
+>   2022-08-10 08:00:00 | 2022-08-10T08:00:00 | "Aug 10, 2022 - 08:00 AM"
