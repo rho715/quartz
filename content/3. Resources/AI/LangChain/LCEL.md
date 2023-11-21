@@ -4,7 +4,6 @@ tags:
   - ai
   - langchain
   - python
-draft: "true"
 ---
 # Why use LCEL
 [link](https://python.langchain.com/docs/expression_language/why)

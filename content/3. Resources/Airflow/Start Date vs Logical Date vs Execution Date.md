@@ -225,7 +225,7 @@ import os
     
     current\_time: `2023-05-04 13:00:00`
 
-
+   
     |type|start_date|schedule_interval|logical_date|실행 시간|
     |---|---|---|---|
     |`- timedelta(days=1)`|`2023-05-03 13:00:00`|`(10 * * * *)`|`2023-05-03 13:10:00`|`2023-05-03 14:10:00`|
@@ -253,6 +253,7 @@ current\_time: `2023-05-04 13:00:00`
 |type|start_date|schedule_interval|logical_date|실행 시간|
 |---|---|---|---|
 |`- timedelta(hours=1)`|`2023-05-04 12:00:00`|`(10 * * * *)`|`2023-05-04 12:10:00`|`2023-05-04 13:10:00`|
+
 
 ![[Pasted image 20231122025714.png]]
 
@@ -291,10 +292,7 @@ current\_time: `2023-05-04 13:00:00`
     <summary>설명</summary>
     <div markdown="1">
 
-    정답: c
-    <div style="display: flex;"> ![[]]
-        <img src="./files/Pasted image 20231122025740.png" alt="Airflow" style="width: 100%;">
-    </div>
+    정답: c ![[Pasted image 20231122025740.png]]
 
 
     </div>

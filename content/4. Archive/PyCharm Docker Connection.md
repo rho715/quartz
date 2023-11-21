@@ -5,7 +5,6 @@ tags:
   - docker
   - ide
   - "#check"
-draft: "true"
 ---
 # PyCharm using Docker Compose as Interpreter
 

@@ -2,7 +2,6 @@
 title: BigQuery Total Storage
 tags:
   - bigquery
-  - "#check"
 ---
 
 # 목적/배경

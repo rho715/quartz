@@ -3,7 +3,6 @@ title: Prompt Components
 tags:
   - ai
   - prompt
-  - "#check"
   - youtube
 ---
 <iframe src="https://www.youtube.com/embed/olRqEoiWy6Q" Width="560" Height="315" > </iframe>

@@ -1,4 +1,13 @@
-https://mohitdsoni.medium.com/how-to-use-chat-gpt-and-langchain-to-get-responses-from-your-documents-768a9ca0e0d0
+---
+title: LangChain RAG
+tags:
+  - ai
+  - langchain
+  - rag
+  - python
+---
+
+[link](https://mohitdsoni.medium.com/how-to-use-chat-gpt-and-langchain-to-get-responses-from-your-documents-768a9ca0e0d0)
 
 ```python 
 #Import required packages  
