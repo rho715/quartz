@@ -30,26 +30,26 @@ tags:
 |[INFORMATION_SCHEMA.VIEWS](https://cloud.google.com/bigquery/docs/information-schema-views?hl=ko)|뷰|
 |[INFORMATION_SCHEMA.SESSIONS_BY_*](https://cloud.google.com/bigquery/docs/information-schema-sessions?hl=ko)|세션|  
 |[TABLE META DATA](https://stackoverflow.com/questions/44288261/get-the-last-modified-date-for-all-bigquery-tables-in-a-bigquery-project)|메타데이터|
+
 # META DATA EXAMPLE 
 ```sql
 #standardSQL
+
 SELECT *, TIMESTAMP_MILLIS(last_modified_time) last_modified_timestamp
-FROM `dataset.__TABLES__` where table_id like 'table_name%'
+FROM `{{dataset}}.__TABLES__`
+WHERE table_id like '{{table_name}}%'
 ```
 
-
-<div style="overflow-x:auto;">
-
-| project_id      | dataset_id      | table_id      | creation_time | last_modified_time | row_count | size_bytes | type | last_modified_timestamp        |
-| --------------- | --------------- | ------------- | ------------- | ------------------ | --------- | ---------- | ---- | ------------------------------ |
-| your_project_id | your_dataset_id | your_table_id | 1675647106802 | 1675647127420      | 4330      | 336088     | 1    | 2023-02-06 01:32:07.420000 UTC |
-| your_project_id | your_dataset_id | your_table_id | 1675647051287 | 1675647102301      | 5812      | 451295     | 1    | 2023-02-06 01:31:42.301000 UTC |
-| your_project_id | your_dataset_id | your_table_id | 1675647025282 | 1675647048880      | 4953      | 384616     | 1    | 2023-02-06 01:30:48.880000 UTC |
-| your_project_id | your_dataset_id | your_table_id | 1675647751604 | 1675647769644      | 4518      | 350798     | 1    | 2023-02-06 01:42:49.644000 UTC |
-| your_project_id | your_dataset_id | your_table_id | 1675647731291 | 1675647749110      | 4525      | 351292     | 1    | 2023-02-06 01:42:29.110000 UTC |
-| your_project_id | your_dataset_id | your_table_id | 1675647709909 | 1675647728649      | 4942      | 383588     | 1    | 2023-02-06 01:42:08.649000 UTC |
-
-</div>
+## Columns 
+- `project_id`
+- `dataset_id`
+- `table_id`
+- `creation_time`
+- `last_modified_time`
+- `row_count`
+- `size_bytes`
+- `type`
+- `last_modified_timestamp`
 
 # TABLE CONVERTER
 - [html to markdown](https://jmalarcon.github.io/markdowntables/)
