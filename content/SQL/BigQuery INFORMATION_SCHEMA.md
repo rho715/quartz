@@ -2,6 +2,7 @@
 title: BigQuery INFORMATION_SCHEMA
 tags:
   - bigquery
+  - bookmark
 ---
 
 ## BigQuery INFORMATION_SCHEMA 소개

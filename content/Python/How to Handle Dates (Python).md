@@ -1,5 +1,5 @@
 ---
-title: DATE Type 뽀개기
+title: Dates (Python)
 tags:
   - python
   - datetime

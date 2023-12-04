@@ -7,8 +7,10 @@ tags:
   - azure
   - google
   - aws
+  - bookmark
 ---
 # AI Github links 
+--- 
 ## OpenAI 
 - [OpenAI Cookbook](https://github.com/openai/openai-cookbook/tree/main/examples)
 ## Azure OpenAI
@@ -24,6 +26,7 @@ tags:
 - [Bedrock Code Samples](https://github.com/aws-samples/amazon-bedrock-workshop.git)
 
 # AI Services
+---
 ## [Stable Doodle](https://clipdrop.co/stable-doodle)
 - Doodle -> Image 
 ## [Pika Labs](https://www.pika.art/demo)

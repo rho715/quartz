@@ -4,6 +4,7 @@ tags:
   - ai
   - claude
   - prompt
+  - bookmark
 ---
 # Summary 
 - Prompt Composition Sample ![[Pasted image 20231204193856.png]]![[Pasted image 20231204193916.png]]![[Pasted image 20231204194109.png]]
@@ -26,20 +27,24 @@ tags:
 	- XML tags (<> to open, </> to close) are a common and highly effective way to organize information within a prompt. Sometimes it also helps to ask Claude to think about its answer first before responding.
 
 # Intermediate
-- Use Prompt Template![[Pasted image 20231204191716.png]]![[Pasted image 20231204191849.png]]
-- JSON Output![[Pasted image 20231204192228.png]]
-- allow Claude to think and perform ![[Pasted image 20231204192756.png]] ![[Pasted image 20231204192901.png]]
+## Use Prompt Template![[Pasted image 20231204191716.png]]![[Pasted image 20231204191849.png]]
+## JSON Output![[Pasted image 20231204192228.png]]
+## Allow Claude to think and perform ![[Pasted image 20231204192756.png]]![[Pasted image 20231204192901.png]]
+## Order Matters
 - *Claude is sometimes sensitive to the order of arguments.* Claude is more likely to choose the second of two options.
 	- negative first and positive second: overall assessment may be positive
 	- positive first and negative second 
-- few shot prompting ![[Pasted image 20231204193109.png]] ![[Pasted image 20231204193244.png]]
+## few-shot prompting ![[Pasted image 20231204193109.png]]![[Pasted image 20231204193244.png]]
 
 # Advanced
-- minimize hallucination by giving Claude an option that it is OK for it to decline to answer, or to only answer if it actually knows the answer with certainty ![[Pasted image 20231204193415.png]]
+## Minimize Hallucination 
+- by giving Claude an option that it is OK for it to decline to answer, or to only answer if it actually knows the answer with certainty ![[Pasted image 20231204193415.png]]
 - it is best practice to have the question at the bottom after any text or doc
 - make Claude gather evidence first ![[Pasted image 20231204193612.png]]
-- Provide Claude chat history to prove, verify, improve, double check and etc.![[Pasted image 20231204195127.png]]
-- Multiple Calls ![[Pasted image 20231204195113.png]]
+## Double Check using AI
+- Provide Claude chat history to prove, verify, improve, double check and etc.
+![[Pasted image 20231204195127.png]]
+## Multiple Calls ![[Pasted image 20231204195113.png]]
 
-## function calling 
-- n previous substitution exercises, we substituted text into prompts. In function calling, we substitute function results into prompts. Claude can't literally call or access functions. Instead, we have Claude output the function name and arguments, halt while the function is called, then we reprompt with the function results.
+## Function Calling 
+- In previous substitution exercises, we substituted text into prompts. In function calling, we substitute function results into prompts. Claude can't literally call or access functions. Instead, we have Claude output the function name and arguments, halt while the function is called, then we reprompt with the function results.
