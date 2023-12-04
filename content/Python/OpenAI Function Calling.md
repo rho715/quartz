@@ -15,3 +15,8 @@ tags:
 - [OpenAI Cookbook](https://cookbook.openai.com/examples/how_to_call_functions_for_knowledge_retrieval)
 ## LangChain: Using OpenAI functions
 - [OpenAI functions](https://python.langchain.com/docs/modules/chains/how_to/openai_functions)
+
+
+```run-python
+1+1
+```

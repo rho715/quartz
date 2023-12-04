@@ -1,5 +1,5 @@
 ---
-title: BigQuery Total Storage
+title: . BigQuery Total Storage
 tags:
   - bigquery
 ---
