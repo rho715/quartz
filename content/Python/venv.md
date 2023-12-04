@@ -1,5 +1,5 @@
 ---
-title: 🐍 파이썬 가상환경 설정하기
+title: _. 파이썬 가상환경 설정하기
 tags:
   - python
   - anaconda

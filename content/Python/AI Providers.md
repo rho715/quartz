@@ -1,5 +1,5 @@
 ---
-title: 🐍 AI Providers
+title: _. AI Providers
 tags:
   - ai
   - openai

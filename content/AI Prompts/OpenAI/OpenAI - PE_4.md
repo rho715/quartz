@@ -1,5 +1,5 @@
 ---
-title: 🤖 4. 텍스트 변환
+title: 4. 텍스트 변환
 tags:
   - python
   - openai

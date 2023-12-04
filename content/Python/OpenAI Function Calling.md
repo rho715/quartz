@@ -1,5 +1,5 @@
 ---
-title: 🐍 OpenAI Function Calling
+title: _. OpenAI Function Calling
 tags:
   - ai
   - openai

@@ -1,5 +1,5 @@
 ---
-title: 🐍 Requests Tutorial (HTTP)
+title: _. Requests Tutorial (HTTP)
 tags:
   - http
   - request

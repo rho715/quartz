@@ -1,5 +1,5 @@
 ---
-title: 🐍 OpenAI Python
+title: _. OpenAI Python
 tags:
   - openai
   - python

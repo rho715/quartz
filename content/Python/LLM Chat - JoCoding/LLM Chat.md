@@ -1,5 +1,5 @@
 ---
-title: 🐍 LangChain 이용한 AI 웹서비스
+title: _. LangChain 이용한 AI 웹서비스
 tags:
   - ai
   - python

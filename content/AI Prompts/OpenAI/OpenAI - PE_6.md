@@ -1,5 +1,5 @@
 ---
-title: 🤖 6. 챗봇
+title: 6. 챗봇
 tags:
   - python
   - openai

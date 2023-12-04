@@ -1,5 +1,5 @@
 ---
-title: 🐍 LangChain RAG
+title: _. LangChain RAG
 tags:
   - ai
   - langchain
