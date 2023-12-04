@@ -1,5 +1,5 @@
 ---
-title: . BigQuery INFORMATION_SCHEMA
+title: _. BigQuery INFORMATION_SCHEMA
 tags:
   - bigquery
   - bookmark

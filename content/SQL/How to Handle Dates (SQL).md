@@ -1,5 +1,5 @@
 ---
-title: . Dates (SQL)
+title: _. Dates (SQL)
 tags:
   - sql
   - date
