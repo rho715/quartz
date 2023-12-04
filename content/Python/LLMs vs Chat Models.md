@@ -1,5 +1,5 @@
 ---
-title: LLMs vs Chat Models
+title: 🐍 LLMs vs Chat Models
 tags: 
 status:
   - working

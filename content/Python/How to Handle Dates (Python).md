@@ -1,5 +1,5 @@
 ---
-title: Dates (Python)
+title: 🐍 Dates (Python)
 tags:
   - python
   - datetime

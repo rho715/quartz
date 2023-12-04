@@ -1,5 +1,5 @@
 ---
-title: 3. 추론하기
+title: 🤖 3. 추론하기
 tags:
   - python
   - openai

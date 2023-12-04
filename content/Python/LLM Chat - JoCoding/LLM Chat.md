@@ -1,5 +1,5 @@
 ---
-title: 랭체인(LangChain) 이용한 AI 웹서비스 만들기 (with ChatGPT, LLaMA 2)
+title: 🐍 LangChain 이용한 AI 웹서비스
 tags:
   - ai
   - python

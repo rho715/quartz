@@ -1,5 +1,5 @@
 ---
-title: "Requests Tutorial: Working With HTTP and Websites in Python"
+title: 🐍 Requests Tutorial (HTTP)
 tags:
   - http
   - request

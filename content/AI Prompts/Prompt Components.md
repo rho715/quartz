@@ -1,5 +1,5 @@
 ---
-title: Prompt Components
+title: 🤖 Prompt Components
 tags:
   - ai
   - prompt

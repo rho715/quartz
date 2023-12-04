@@ -1,5 +1,5 @@
 ---
-title: LangChain Expression Language (LCEL)
+title: 🐍 LangChain Expression Language (LCEL)
 tags:
   - ai
   - langchain
