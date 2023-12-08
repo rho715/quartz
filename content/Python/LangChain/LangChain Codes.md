@@ -1,13 +1,13 @@
 ---
-title: LangChain Codes
+title: _. LangChain Codes
 tags:
   - python
   - langchain
   - ai
   - openai
 ---
-# importing AzureChatOpenAI
-
+# Importing `AzureChatOpenAI()`
+----
 ## set your `.env` file first
 ```
 OPENAI_API_TYPE="azure"
@@ -16,7 +16,7 @@ OPENAI_API_VERSION="2023-07-01-preview"
 OPENAI_API_KEY="{your_key}"
 ```
 
-## when langchain<= 0.0.332
+## when `langchain<= 0.0.332`
 ```python
 
 from langchain.chat_models import AzureChatOpenAI
@@ -34,7 +34,7 @@ llm = AzureChatOpenAI(
     # model_kwargs={"streaming": True},
 )
 ```
-## when langchain >=0.0.345
+## when `langchain >=0.0.345`
 ```python
 from langchain.chat_models import AzureChatOpenAI
 import os 
@@ -51,14 +51,14 @@ llm = AzureChatOpenAI(
 )
 ```
 
-# simple trigger 
-
-## string 
+# Simple Trigger 
+---
+## String 
 ```python
 llm.predict("what are the cities in Korea")
 ```
 
-## chat 
+## Messages
 ```python
 from langchain.schema import HumanMessage, AIMessage, SystemMessage
 
@@ -74,7 +74,8 @@ llm.predict_messages(messages)
 ```
 
 # Using Templates
-## using PromptTemplate
+---
+## Using `PromptTemplate`
 ```python
 from langchain.schema import HumanMessage, AIMessage, SystemMessage
 from langchain.prompts import PromptTemplate, ChatPromptTemplate
@@ -85,7 +86,7 @@ prompt = template.format(country1="Mexico", country2="Thailand")
 llm.predict(prompt)
 ```
 
-## using ChatPromptTemplate
+## Using `ChatPromptTemplate`
 ```python
 from langchain.schema import HumanMessage, AIMessage, SystemMessage
 from langchain.prompts import PromptTemplate, ChatPromptTemplate
@@ -107,7 +108,7 @@ llm.predict_messages(prompt)
 ```
 
 # Parser
-
+---
 ```python
 from langchain.schema import BaseOutputParser
 
@@ -122,9 +123,9 @@ p.parse("hllo, world")
 
 
 # LCEL 
+---
 - 참고하면 좋은 기록: [[LCEL]]
-
-## not using LCEL
+## Not Using LCEL
 ```python
 # not using LCEL
 template = ChatPromptTemplate.from_messages([
@@ -143,7 +144,7 @@ result = llm.predict_messages(prompt)
 p.parse(result.content)
 ```
 
-## using LCEL
+## Using LCEL
 ```python
 # using LCEL
 template = ChatPromptTemplate.from_messages([
@@ -160,7 +161,7 @@ chain.invoke({"max_items":5, "question":"What are cities in Korea?"})
 
 
 # Applications (multiple chains & streaming)
-
+---
 ```python
 from langchain.callbacks import StreamingStdOutCallbackHandler
 llm_streaming = AzureChatOpenAI(
@@ -176,8 +177,6 @@ llm_streaming = AzureChatOpenAI(
     callbacks=[StreamingStdOutCallbackHandler()]
 )
     
-
-
 chef_prompt = ChatPromptTemplate.from_messages([
     ("system", "You are a world-class international chef. \
      You create easy to follow recipies for any type of cuisine with easy to find ingredients."),
