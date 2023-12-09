@@ -1,5 +1,5 @@
 ---
-title: _. LangChain Codes
+title: _. LangChain Basic Codes
 tags:
   - python
   - langchain
@@ -459,7 +459,7 @@ final_chain = {"recipe": chef_chain} | chain_veg
 final_chain.invoke({"dish":"kimchi jjigae"})
 ```
 
-# Prompts 
+# Prompt Files
 ---
 ## Load Prompts
 - importing `prompt.json`
@@ -623,4 +623,65 @@ chain.invoke(
         "question": "What is your fav food?",
     }
 )
+```
+
+# Cache
+---
+```python
+from langchain.callbacks import StreamingStdOutCallbackHandler
+from langchain.globals import set_llm_cache, set_debug
+from langchain.cache import InMemoryCache, SQLiteCache
+
+#set_llm_cache(InMemoryCache())
+set_llm_cache(SQLiteCache("cache.db")) # <- this will create a cache.db file in the current directory
+set_debug(True)
+
+
+llm.predict("How do you make italian pasta") # 34.3s & 0.0
+```
+
+# `Usage`
+---
+```python
+from langchain.callbacks import get_openai_callback
+
+with get_openai_callback() as usage: # <- this will print the usage of the API that is under the with statement
+    a = llm.predict("What is the recipe for soju")
+    b = llm.predict("What is the recipe for bread")
+    print(a, "\n")
+    print(b, "\n")
+    print(usage)
+```
+
+# Model Settings 
+---
+## Save `model.json`
+```python
+from langchain.llms.openai import OpenAI
+
+chat = OpenAI(temperature=0.1, max_tokens=450)
+chat.save("model.json")
+```
+
+## Result 
+```json 
+{
+    "model_name": "gpt-3.5-turbo-16k",
+    "temperature": 0.1,
+    "max_tokens": 450,
+    "top_p": 1,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    "n": 1,
+    "request_timeout": null,
+    "logit_bias": {},
+    "_type": "openai"
+}
+```
+
+## Load `model.json`
+```python
+from langchain.llms.loading import load_llm
+
+chat = load_llm("model.json")
 ```
