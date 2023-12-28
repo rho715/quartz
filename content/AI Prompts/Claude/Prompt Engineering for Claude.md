@@ -6,6 +6,8 @@ tags:
   - prompt
   - bookmark
 ---
+> [!note]
+> [Claude 2.1](https://www.anthropic.com/index/claude-2-1-prompting) Add `“Here is the most relevant sentence in the context:”` At the end when finding the information from the context.![[Pasted image 20231213150601.png]]
 # Summary 
 - Prompt Composition Sample ![[Pasted image 20231204193856.png]]![[Pasted image 20231204193916.png]]![[Pasted image 20231204194109.png]]
 - [Legal Services](https://docs.google.com/spreadsheets/d/19jzLgRruG9kjUQNKtCg1ZjdD6l6weA6qRXG5zLIAhC8/edit#gid=898779877)
