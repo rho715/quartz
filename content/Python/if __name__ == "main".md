@@ -1,7 +1,7 @@
 ---
 title: _. if __name__ == "main"
-tags: 
-draft: "true"
+tags:
+  - python
 ---
 <iframe src="https://www.youtube.com/embed/3dHyS1W4TIE" Width="560" Height="315" > </iframe>
 
