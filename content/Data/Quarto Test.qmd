@@ -1,0 +1,20 @@
+---
+title: _. Quarto Test
+tags:
+  - "#r"
+  - quarto
+---
+
+```run-r
+a <- c(1:20)
+a
+```
+
+
+
+```{r}
+b <- c(4:20)
+b
+```
+
+

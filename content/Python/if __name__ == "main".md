@@ -11,8 +11,7 @@ tags:
 ---
 
 ### `mymath.py`
-```run-python
-
+```python
 def add(a, b):
 	return a + b
 
@@ -20,15 +19,14 @@ print(add(100, 60))
 ```
 
 ### `test.py`
-```run-python
+```python
 import mymath
 
 print(mymath.add(90, 4))
-
 ```
 
-### result of python3 `test.py`
-> `160`
+### result: `python3 test.py`
+> `160`        
 > `94`
 
 > [!note]
@@ -54,10 +52,10 @@ print(mymath.add(90, 4))
 
 ```
 
-### result of python3 `mymath.py`
+### result: `python3 mymath.py`
 > `__main__`
-### result of python3 `test.py`
-> `mymath`
+### result: `python3 test.py`
+> `mymath`      
 > `94`
 
 > [!note]
